@@ -1,0 +1,67 @@
+export interface PostProps {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+export interface GeoProps {
+  lat: string;
+  lng: string;
+}
+
+export interface AddressProps {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo: GeoProps;
+}
+
+export interface CompanyProps {
+  name: string;
+  catchPhrase: string;
+  bs: string;
+}
+
+export interface UserProps {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: AddressProps;
+  phone: string;
+  website: string;
+  company: CompanyProps;
+}
+
+// Add these to your existing interfaces
+
+export interface PostData {
+  userId: number;
+  id?: number;
+  title: string;
+  body: string;
+}
+
+export interface PostModalProps {
+  onClose: () => void;
+  onSubmit: (post: PostData) => void;
+}
+// Add these to your existing interfaces
+
+export interface UserData {
+  id?: number;
+  name: string;
+  username: string;
+  email: string;
+  address: AddressProps;
+  phone: string;
+  website: string;
+  company: CompanyProps;
+}
+
+export interface UserModalProps {
+  onClose: () => void;
+  onSubmit: (user: UserData) => void;
+}
